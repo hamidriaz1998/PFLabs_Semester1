@@ -2,9 +2,7 @@
 using namespace std;
 main(){
 
-	string name;
-	cout<<"Enter your name: ";
-	cin>>name;
+	string name = "hamid";
 	while(true){
 		cout<<name<<endl;
 	}
