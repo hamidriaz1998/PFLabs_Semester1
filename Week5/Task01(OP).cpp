@@ -1,7 +1,7 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-float min(float, float);
 main()
 {
 
@@ -12,17 +12,4 @@ main()
     cin >> n2;
     result = min(n1, n2);
     cout << "The minimum of " << n1 << " and " << n2 << " is: " << result;
-}
-
-float min(float number1, float number2)
-{
-
-    if (number1 > number2)
-    {
-        return number2;
-    }
-    if (number2 > number1)
-    {
-        return number1;
-    }
 }
