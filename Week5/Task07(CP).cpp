@@ -6,7 +6,7 @@ main()
 
     int n;
     bool result;
-    cout << "Enter a five-digit number: ";
+    cout << "Enter a three-digit number: ";
     cin >> n;
     result = IsSymmetrical(n);
     if (result)
