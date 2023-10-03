@@ -10,5 +10,5 @@ main()
 	cout << "Enter the exponent: ";
 	cin >> exp;
 	result = pow(base, exp);
-	cout << base << " raised to the power " << exp << " is: ";
+	cout << base << " raised to the power " << exp << " is: "<<result;
 }
