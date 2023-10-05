@@ -1,13 +1,14 @@
 #include <iostream>
-#include <iomanip>
-using namespace std;
-string calculatePoolState(int, int, int, float);
-main()
-{
 
-    int V, P1, P2;
-    float H;
-    string result;
+using namespace std;
+
+string calculatePoolState(int V, int P1, int P2, float H);
+int main()
+{
+    int V = 0;
+    int P1 = 0;
+    int P2 = 0;
+    float H = 0;
     cout << "Enter volume of the pool in liters: ";
     cin >> V;
     cout << "Enter flow rate of the first pipe per hour: ";
@@ -16,30 +17,32 @@ main()
     cin >> P2;
     cout << "Enter hours that the worker is absent: ";
     cin >> H;
-    result = calculatePoolState(V, P1, P2, H);
-    cout << result;
+
+    calculatePoolState(V, P1, P2, H);
 }
-
-string calculatePoolState(int volume, int pipe1, int pipe2, float hours)
+string calculatePoolState(int V, int P1, int P2, float H)
 {
+    float pool = 0;
+    float pipe1 = 0;
+    float pipe2 = 0;
+    float percent1 = 0;
+    float percent2 = 0;
+    float overflow = 0;
+    string result = "";
 
-    float totalFlow;
-    int fillPerc, totalP1Flow, totalP2Flow, p1Perc, p2Perc;
-    totalP1Flow = pipe1 * hours;
-    totalP2Flow = pipe2 * hours;
-    totalFlow = totalP1Flow + totalP2Flow;
-    if (totalFlow > volume)
+    pool = (P1 + P2) * H;
+    percent1 = (P1 * H) / pool * 100;
+    percent2 = (P2 * H) / pool * 100;
+
+    if (pool <= V)
     {
-        int overflow = totalFlow - volume;
-        stringstream stream;
-        stream << fixed << setprecision(1) << hours;
-        return "For " + stream.str() + " hours, the pool overflows with " + to_string(overflow) + " liters.";
+        cout << "The pool is " << (int)(pool / 10) << "% full. Pipe 1: " << (int)percent1 << "%. Pipe 2: " << (int)percent2 << "%.";
     }
-    if (totalFlow <= volume)
+    else
     {
-        fillPerc = (totalFlow / volume) * 100;
-        p1Perc = (totalP1Flow / totalFlow) * 100;
-        p2Perc = (totalP2Flow / totalFlow) * 100;
-        return "The pool is " + to_string(fillPerc) + "% full. Pipe 1: " + to_string(p1Perc) + "%. Pipe 2: " + to_string(p2Perc) + "%.";
+        overflow = pool - V;
+        cout << "For " << H << " hours, the pool overflows with " << overflow << " liters.";
     }
+
+    return result;
 }
