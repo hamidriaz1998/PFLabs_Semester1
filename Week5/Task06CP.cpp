@@ -18,6 +18,6 @@ string checkAlphabetCase(char character){
         return "You have entered Capital A";
     }
     if (character == 'a'){
-        return "You have entered small A";
+        return "You have entered small a";
     }
 }
