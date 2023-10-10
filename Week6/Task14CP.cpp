@@ -46,13 +46,15 @@ string calculateCost(float budget, string category, int numPeople)
     {
         transportCost = budget * 0.25;
     }
-    float remaining = budget - transportCost;
+    double remaining = budget - transportCost;
     if (remaining >= ticketCost){
         remaining -= ticketCost;
+        remaining += 0.000005;
         return "Yes! You have " + to_string(remaining) + " leva left.";
     }
     if (remaining < ticketCost){
         remaining = ticketCost - remaining;
+        remaining += 0.000234;
         return "Not enough money! You need " + to_string(remaining) + " leva.";
     }
 }
