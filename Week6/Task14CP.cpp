@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
-string calculateCost(float budget, string category, int numPeople);
+string calculateCost(double budget, string category, int numPeople);
 main()
 {
-    float budget;
+    double budget;
     int numPeople;
     string category;
     cout << "Enter the budget: ";
@@ -15,9 +15,9 @@ main()
     cout << calculateCost(budget, category, numPeople);
 }
 
-string calculateCost(float budget, string category, int numPeople)
+string calculateCost(double budget, string category, int numPeople)
 {
-    float ticketCost = 0, transportCost = 0;
+    double ticketCost = 0, transportCost = 0;
     if (category == "VIP")
     {
         ticketCost = 499.99 * numPeople;
@@ -49,12 +49,12 @@ string calculateCost(float budget, string category, int numPeople)
     double remaining = budget - transportCost;
     if (remaining >= ticketCost){
         remaining -= ticketCost;
-        remaining += 0.000005;
+        // remaining += 0.000005;
         return "Yes! You have " + to_string(remaining) + " leva left.";
     }
     if (remaining < ticketCost){
         remaining = ticketCost - remaining;
-        remaining += 0.000234;
+        // remaining += 0.000234;
         return "Not enough money! You need " + to_string(remaining) + " leva.";
     }
 }
