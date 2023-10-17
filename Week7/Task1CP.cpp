@@ -1,18 +1,20 @@
 #include <iostream>
 using namespace std;
 void printTable(int number);
-main(){
+main()
+{
     int n;
-    cout<<"Enter a number: ";
-    cin>>n;
+    cout << "Enter a number: ";
+    cin >> n;
     printTable(n);
 }
 
-void printTable(int number){
+void printTable(int number)
+{
     int answer;
-    for ( int i = 1; i <= 10; i++)
+    for (int i = 1; i <= 10; i++)
     {
-        answer = i*number;
-        cout<<number<<" x "<<i<<" = "<<answer<<endl;
+        answer = i * number;
+        cout << number << " x " << i << " = " << answer << endl;
     }
 }
