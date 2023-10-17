@@ -11,3 +11,12 @@ main(){
     cout<<"GCD: "<<calculateGCD(n1,n2);
     cout<<"LCM: "<<calculateLCM(n1,n2);
 }
+
+int calculateGCD(int number1,int number2){
+    while (number2 != 0){
+        int temp = number2;
+        number2 = number1 % number2;
+        number1 = temp;
+    }
+    return number1;
+}
