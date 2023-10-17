@@ -24,7 +24,7 @@ int calculatePrice(int money, int year){
             price += 12000;
         }
         else{
-            i += 12000 + 50*age;
+            price += 12000 + 50*age;
         }
         age++;
     }
