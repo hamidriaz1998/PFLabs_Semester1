@@ -8,7 +8,12 @@ main(){
     cout<<"Enter Year: ";
     cin>>year;
     int result = calculatePrice(money,year);
-    
+        if (result >=0){
+        cout<<"Yes! He will live a carefree life and will have "<<result<<" dollars left.";
+    }
+    else{
+        cout<<"He will need "<<abs(result)<<" dollars to survive.";
+    }
 }
 
 int calculatePrice(int money, int year){
