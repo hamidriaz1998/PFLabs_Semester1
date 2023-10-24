@@ -4,11 +4,11 @@ bool doesBrickFit(int, int, int, int, int);
 main()
 {
     int a, b, c, w, h;
-    cout << "Enter width of brick: ";
-    cin >> a;
     cout << "Enter height of brick: ";
+    cin >> a;
+    cout << "Enter width of brick: ";
     cin >> b;
-    cout << "Enter breadth of brick: ";
+    cout << "Enter depth of brick: ";
     cin >> c;
     cout << "Enter the width of hole: ";
     cin >> w;
