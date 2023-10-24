@@ -2,16 +2,20 @@
 using namespace std;
 bool doesBrickFit(int,int,int,int,int);
 main(){
-    int wB,hB,bB,wH,hH;
+    int a,b,c,w,h;
     cout<<"Enter width of brick: ";
-    cin>>wB;
+    cin>>a;
     cout<<"Enter height of brick: ";
-    cin>>hB;
+    cin>>b;
     cout<<"Enter breadth of brick: ";
-    cin>>bB;
+    cin>>c;
     cout<<"Enter the width of hole: ";
-    cin>>wH;
+    cin>>w;
     cout<<"Enter the height of hole: ";
-    cin>>hH;
-    cout<<doesBrickFit(wB,hB,bB,wH,hH);
+    cin>>h;
+    cout<<doesBrickFit(a,b,c,w,h);
+}
+
+bool doesBrickFit(int a,int b,int c,int w, int h){
+    if ()
 }
