@@ -20,3 +20,13 @@ bool isPrime(int num)
     }
     return true;
 }
+
+int primeNumber(int n){
+    int prime = 0;
+    for (int i=2;i<=n;i++){
+        if (isPrime(i)){
+            prime += 1;
+        }
+    }
+    return prime;
+}
