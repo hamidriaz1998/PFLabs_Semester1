@@ -27,15 +27,17 @@ string plant(string seed, int water, int fert, int temp)
             }
             count--;
         }
-    
     }
-    else{
-        for(int i =1;i<=water;i++){
-            for(int j =1;j<=water;j++){
+    else
+    {
+        for (int i = 1; i <= water; i++)
+        {
+            for (int j = 1; j <= water; j++)
+            {
                 plant1 += "-";
             }
         }
-        plant1+= seed;
+        plant1 += seed;
     }
     return plant1;
 }
