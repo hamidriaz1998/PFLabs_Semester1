@@ -18,4 +18,14 @@ main()
     {
         cin >> arr[i];
     }
+    cout<<"The largest number entered is: "<<findLargestNumber(arr,n);
+}
+int findLargestNumber(int arr[], int size){
+    int max = 0;
+    for (int i = 0; i<size;i++){
+        if(arr[i]>max){
+            max = arr[i];
+        }
+    }
+    return max;
 }
