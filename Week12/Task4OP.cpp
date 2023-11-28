@@ -7,7 +7,7 @@ main()
     int size;
     cout << "Enter row size: ";
     cin >> size;
-    cout << "Enter the elements of the matrix: ";
+    cout << "Enter the elements of the matrix: "<<endl;
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
