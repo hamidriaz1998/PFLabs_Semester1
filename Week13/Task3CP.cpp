@@ -26,5 +26,6 @@ int countCharacters(string fileName,char ch)
         if (r[i] == ch || r[i] == upper)
         count++;
     }
+    f.close();
     return count;
 }
